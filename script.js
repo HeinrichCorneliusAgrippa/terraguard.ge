@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Option 1: Direct download from your repository
             // Place your PDF file in a 'documents' folder in your project
-            const pdfUrl = '../TerraGuardLand/TerraGuardOnePager.pdf';
+            const pdfUrl = 'TerraGuardOnePager.pdf';
             
             // Option 2: Download from external URL (if hosted elsewhere)
             // const pdfUrl = 'https://yourdomain.com/path/to/terraguard-one-pager.pdf';
