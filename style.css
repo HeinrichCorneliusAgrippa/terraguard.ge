@@ -215,7 +215,7 @@ html, body {
     width: 100vw;
     height: 100vh;
     min-height: 700px;
-    background-image: url('profilePics/background.jpg');
+    background-image: url('https://github.com/HeinrichCorneliusAgrippa/terraguard.ge/blob/main/profilePics/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
