@@ -965,3 +965,6 @@ background-image: url('https://heinrichcorneliusagrippa.github.io/terraguard.ge/
   background-color: var(--accent-hover);
 }
 
+::-webkit-scrollbar-thumb {
+  background: red !important;
+}
