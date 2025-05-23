@@ -946,23 +946,27 @@ background-image: url('https://heinrichcorneliusagrippa.github.io/terraguard.ge/
         }
 
 
-/* Force a red scrollbar for quick testing */
 ::-webkit-scrollbar {
-  width: 16px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0B0F14; /* very dark */
+  background: var(--primary-dark); /* #0B0F14 */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: red; /* obvious red thumb */
-  border-radius: 10px;
-  border: 3px solid #0B0F14;
+  background: var(--accent); /* #3A9D23 */
+  border-radius: 8px;
+  border: 2px solid var(--primary-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover); /* #2E7A1B */
 }
 
 /* Firefox */
 body {
   scrollbar-width: thin;
-  scrollbar-color: red #0B0F14;
+  scrollbar-color: var(--accent) var(--primary-dark);
 }
+
