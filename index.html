@@ -1,46 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Under Development</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      height: 100%;
-      width: 100%;
-      font-family: Arial, sans-serif;
-    }
-
-    .background {
-      background-image: url('profilePics/logo-removebg-preview.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 100%;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .text {
-      color: black;
-      font-size: 3rem;
-      font-weight: bold;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-      text-align: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraGuard - Coming Soon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            /* Add your background photo here with dark overlay */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('profilePics/chailuri.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: #003300; /* Fallback deep green if image fails */
+        }
+        .container {
+            max-width: 800px;
+            padding: 20px;
+        }
+        .logo {
+            max-width: 300px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 3em;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 10px 0;
+        }
+        h2 {
+            font-size: 2em;
+            font-weight: 400;
+            margin: 10px 0;
+            color: #FFD700; /* Gold for subheadline */
+        }
+        p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .contact {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .contact a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+        .social {
+            margin-top: 20px;
+        }
+        .social a {
+            color: #ffffff;
+            margin: 0 10px;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+        .social a:hover {
+            color: #FFD700;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 1em;
+            }
+            .logo {
+                max-width: 200px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="background">
-    <div class="text">Under Development</div>
-  </div>
+    <div class="container">
+        <img src="profilePics/white logo.png" alt="TerraGuard Logo" class="logo">
+        <h1>Coming Soon</h1>
+        <h2>AI Precision for Vineyards</h2>
+        <p>We’re building an AI-powered Co-Pilot to help vineyards detect diseases weeks before the human eye can see them, along with stress and climate threats, before they cause losses.</p>
+        <div class="contact">📩 Contact us: <a href="mailto:info@terragrd.com">info@terragrd.com</a></div>
+        <div class="social">
+            <a href="https://www.facebook.com/profile.php?id=61568526608388"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/company/terraguard/"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/terraguard.ge/"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
 </body>
 </html>
