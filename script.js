@@ -1,218 +1,232 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            // Scroll animation observer
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
 
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            const navHeight = document.getElementById('nav').offsetHeight;
-            const offset = targetElement.getBoundingClientRect().top + window.scrollY - navHeight;
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
 
-            window.scrollTo({
-                top: offset,
-                behavior: 'smooth'
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                observer.observe(section);
             });
-
-            // Close mobile menu if open
-            const navLinks = document.getElementById('navLinks');
-            if (navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Blog data (newest first)
+            const blogPosts = [
+                {
+                    id: 1,
+                    title: "GIST Accelerator Journey Successfully Completed",
+                    excerpt: "We have completed the GIST acceleration program. The experience challenged us, revealed new opportunities, and helped us refine our team's mission. We are grateful to VentureWell and the mentors who supported us throughout the journey. We are ready for the next chapter.",
+                    image: "gist-accelerator.jpg",
+                    date: "March 2024"
+                },
+                {
+                    id: 2,
+                    title: "Showcasing TerraGuard at DataFest Tbilisi",
+                    excerpt: "Great atmosphere at DataFest Tbilisi, where TerraGuard showcased its vineyard analytics technology and connected with startups, mentors, and innovators. The event helped us exchange ideas, explore collaborations, and gain insights for scaling. We're excited for what's next.",
+                    image: "datafest-tbilisi.jpg",
+                    date: "February 2024"
+                },
+                // Add more blog posts here as needed
+                // Example third post:
+                // {
+                //     id: 3,
+                //     title: "New Partnership Announcement",
+                //     excerpt: "We're excited to announce our new partnership with leading vineyard technology providers.",
+                //     image: "partnership.jpg",
+                //     date: "January 2024"
+                // }
+            ];
+            
+            // Blog carousel functionality
+            const blogGrid = document.getElementById('blog-grid');
+            const carouselNav = document.getElementById('carousel-nav');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const carouselDots = document.getElementById('carousel-dots');
+            const currentSlideSpan = document.getElementById('current-slide');
+            const totalSlidesSpan = document.getElementById('total-slides');
+            
+            const postsPerPage = 2;
+            let currentPage = 0;
+            const totalPages = Math.ceil(blogPosts.length / postsPerPage);
+            
+            // Initialize blog display
+            function initBlog() {
+                totalSlidesSpan.textContent = totalPages;
+                currentSlideSpan.textContent = currentPage + 1;
+                
+                // Show navigation only if we have more than 2 posts
+                if (blogPosts.length > postsPerPage) {
+                    carouselNav.style.display = 'flex';
+                    createDots();
+                    updateButtons();
+                }
+                
+                displayBlogPosts();
             }
+            
+            // Create dots for navigation
+            function createDots() {
+                carouselDots.innerHTML = '';
+                for (let i = 0; i < totalPages; i++) {
+                    const dot = document.createElement('button');
+                    dot.className = 'carousel-dot' + (i === currentPage ? ' active' : '');
+                    dot.setAttribute('data-page', i);
+                    dot.addEventListener('click', () => {
+                        currentPage = i;
+                        displayBlogPosts();
+                        updateButtons();
+                        updateDots();
+                        updateSlideCounter();
+                    });
+                    carouselDots.appendChild(dot);
+                }
+            }
+            
+            // Display blog posts for current page
+            function displayBlogPosts() {
+                blogGrid.innerHTML = '';
+                
+                const startIndex = currentPage * postsPerPage;
+                const endIndex = Math.min(startIndex + postsPerPage, blogPosts.length);
+                
+                // Get posts for current page
+                const postsToShow = blogPosts.slice(startIndex, endIndex);
+                
+                // Add posts to grid
+                postsToShow.forEach(post => {
+                    const blogPost = document.createElement('article');
+                    blogPost.className = 'blog-post';
+                    
+                    blogPost.innerHTML = `
+                        <div class="blog-image-container">
+                            <img src="${post.image}" alt="${post.title}" class="blog-image">
+                        </div>
+                        <div class="blog-content">
+                            <h3 class="blog-title">${post.title}</h3>
+                            <p class="blog-excerpt">${post.excerpt}</p>
+                        </div>
+                    `;
+                    
+                    blogGrid.appendChild(blogPost);
+                });
+                
+                // If we have only 1 post on the last page, center it
+                if (postsToShow.length === 1 && blogPosts.length > 1) {
+                    const blogPost = blogGrid.querySelector('.blog-post');
+                    blogPost.style.gridColumn = '1 / -1';
+                    blogPost.style.maxWidth = '600px';
+                    blogPost.style.margin = '0 auto';
+                }
+            }
+            
+            // Update navigation buttons
+            function updateButtons() {
+                prevBtn.disabled = currentPage === 0;
+                nextBtn.disabled = currentPage === totalPages - 1;
+            }
+            
+            // Update dot indicators
+            function updateDots() {
+                const dots = carouselDots.querySelectorAll('.carousel-dot');
+                dots.forEach((dot, index) => {
+                    if (index === currentPage) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Update slide counter
+            function updateSlideCounter() {
+                currentSlideSpan.textContent = currentPage + 1;
+            }
+            
+            // Event listeners for navigation
+            prevBtn.addEventListener('click', () => {
+                if (currentPage > 0) {
+                    currentPage--;
+                    displayBlogPosts();
+                    updateButtons();
+                    updateDots();
+                    updateSlideCounter();
+                }
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                if (currentPage < totalPages - 1) {
+                    currentPage++;
+                    displayBlogPosts();
+                    updateButtons();
+                    updateDots();
+                    updateSlideCounter();
+                }
+            });
+            
+            // Auto-advance blog every 8 seconds
+            let blogInterval;
+            if (blogPosts.length > postsPerPage) {
+                blogInterval = setInterval(() => {
+                    if (currentPage < totalPages - 1) {
+                        currentPage++;
+                    } else {
+                        currentPage = 0;
+                    }
+                    displayBlogPosts();
+                    updateButtons();
+                    updateDots();
+                    updateSlideCounter();
+                }, 8000);
+                
+                // Pause auto-advance on hover
+                blogGrid.addEventListener('mouseenter', () => {
+                    clearInterval(blogInterval);
+                });
+                
+                blogGrid.addEventListener('mouseleave', () => {
+                    blogInterval = setInterval(() => {
+                        if (currentPage < totalPages - 1) {
+                            currentPage++;
+                        } else {
+                            currentPage = 0;
+                        }
+                        displayBlogPosts();
+                        updateButtons();
+                        updateDots();
+                        updateSlideCounter();
+                    }, 8000);
+                });
+            }
+            
+            // Initialize blog
+            initBlog();
         });
-    });
-
-    const downloadBtn = document.querySelector('a[data-en="Download One-Pager"]');
     
-    if (downloadBtn) {
-        downloadBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Option 1: Direct download from your repository
-            // Place your PDF file in a 'documents' folder in your project
-            const pdfUrl = 'TerraGuardOnePager.pdf';
-            
-            // Option 2: Download from external URL (if hosted elsewhere)
-            // const pdfUrl = 'https://yourdomain.com/path/to/terraguard-one-pager.pdf';
-            
-            // Create temporary link element for download
-            const link = document.createElement('a');
-            link.href = pdfUrl;
-            link.download = 'TerraGuard-One-Pager.pdf'; // This will be the downloaded filename
-            link.style.display = 'none';
-            
-            // Add to DOM, click, and remove
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            
-            // Optional: Track download event (for analytics)
-            console.log('PDF download initiated');
-            
-            // Optional: Show success message
-            showDownloadMessage();
-        });
-    }
-    
-    // Function to show download message
-    function showDownloadMessage() {
-        // Create a temporary message
-        const message = document.createElement('div');
-        message.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #4CAF50;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 5px;
-            z-index: 10000;
-            font-family: 'Roboto', sans-serif;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            transition: opacity 0.3s ease;
-        `;
-        
-        // Set message text based on current language
-        const currentLang = document.documentElement.getAttribute('lang') || 'en';
-        message.textContent = currentLang === 'ka' 
-            ? 'ფაილის ჩამოტვირთვა დაიწყო...' 
-            : 'Download started...';
-        
-        document.body.appendChild(message);
-        
-        // Remove message after 3 seconds
-        setTimeout(() => {
-            message.style.opacity = '0';
-            setTimeout(() => {
-                if (document.body.contains(message)) {
-                    document.body.removeChild(message);
-                }
-            }, 300);
-        }, 3000);
-    }
-
-    // Mobile menu toggle
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const navLinks = document.getElementById('navLinks');
-
-    mobileMenuBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-
-    // Navbar shrink on scroll
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            nav.classList.add('nav-scrolled');
-        } else {
-            nav.classList.remove('nav-scrolled');
-        }
-    });
-
-    // Back to top button visibility
-    const backToTopButton = document.querySelector('.back-to-top');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            backToTopButton.classList.add('visible');
-        } else {
-            backToTopButton.classList.remove('visible');
-        }
-    });
-
-    backToTopButton.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-
-    // Language toggle functionality
-    const languageToggle = document.getElementById('languageToggle');
-    const translatableElements = document.querySelectorAll('[data-en], [data-ka]');
-
-    // Set initial language (English by default)
-    let currentLang = 'en';
-    updateTextContent(currentLang);
-
-    languageToggle.addEventListener('click', () => {
-        currentLang = currentLang === 'en' ? 'ka' : 'en';
-        languageToggle.textContent = currentLang === 'en' ? 'EN' : 'ქარ';
-        
-        // Update HTML lang attribute for proper font rendering
-        document.documentElement.setAttribute('lang', currentLang);
-        
-        // Add language-specific class to body for CSS targeting
-        document.body.className = document.body.className.replace(/lang-\w+/g, '');
-        document.body.classList.add(`lang-${currentLang}`);
-        
-        updateTextContent(currentLang);
-    });
-
-    function updateTextContent(lang) {
-        translatableElements.forEach(element => {
-            if (element.tagName === 'META' && element.getAttribute('name') === 'description') {
-                 element.setAttribute('content', element.getAttribute('data-' + lang + '-description'));
-            } else if (element.tagName === 'TITLE') {
-                 element.textContent = element.getAttribute('data-' + lang);
-            }
-             else if (element.classList.contains('section-title')) {
-                // Handle special case for the title with colored spans
-                const enText = element.getAttribute('data-en');
-                const kaText = element.getAttribute('data-ka');
-                if (element.innerHTML.includes('<span class="dusk-gold">') || element.innerHTML.includes('<span class="infra-green">')) {
-                     if (lang === 'en') {
-                        element.innerHTML = `<span class="dusk-gold">19x</span> More Coverage. <span class="infra-green">5x</span> Less Cost.`;
-                     } else {
-                         element.innerHTML = `<span class="dusk-gold">19x</span> მეტი დაფარვა. <span class="infra-green">5x</span> ნაკლები ხარჯი.`;
-                     }
-                } else {
-                    element.textContent = element.getAttribute('data-' + lang);
-                }
-
-            }
-             else if (element.classList.contains('lang-text')) {
-                const enText = element.getAttribute('data-en');
-                const kaText = element.getAttribute('data-ka');
-
-                // Handle the Hero h1 specifically to maintain structure
-                if (element.tagName === 'H1') {
-                     if (lang === 'en') {
-                         element.innerHTML = `<span>Eyes in the Sky</span><span>Safety on the Ground</span>`;
-                     } else {
-                          element.innerHTML = `<span>თვალები ცაში</span><span>დაცულობა მიწაზე</span>`;
-                     }
-                } else {
-                    element.textContent = element.getAttribute('data-' + lang);
-                }
-
-            } else {
-                element.textContent = element.getAttribute('data-' + lang);
-            }
-        });
-    }
-
-    // Intersection Observer for animations
-    const animateElements = document.querySelectorAll('.animate');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                if (entry.target.classList.contains('slide-up')) {
-                    entry.target.classList.add('slide-up');
-                } else if (entry.target.classList.contains('slide-left')) {
-                    entry.target.classList.add('slide-left');
-                } else if (entry.target.classList.contains('slide-right')) {
-                    entry.target.classList.add('slide-right');
-                } else {
-                    entry.target.classList.add('fade-in');
-                }
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    });
-
-    animateElements.forEach(el => observer.observe(el));
-});
