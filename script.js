@@ -43,7 +43,7 @@
                     id: 1,
                     title: "GIST Accelerator Journey Successfully Completed",
                     excerpt: "We have completed the GIST acceleration program. The experience challenged us, revealed new opportunities, and helped us refine our team's mission. We are grateful to VentureWell and the mentors who supported us throughout the journey. We are ready for the next chapter.",
-                    image: "profilePics/datafest-tbilisi.jpg",
+                    image: "profilePics/gist-accelerator.jpg",
                     date: "March 2024"
                 },
                 {
