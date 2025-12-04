@@ -43,14 +43,14 @@
                     id: 1,
                     title: "GIST Accelerator Journey Successfully Completed",
                     excerpt: "We have completed the GIST acceleration program. The experience challenged us, revealed new opportunities, and helped us refine our team's mission. We are grateful to VentureWell and the mentors who supported us throughout the journey. We are ready for the next chapter.",
-                    image: "gist-accelerator.jpg",
+                    image: "profilePics/datafest-tbilisi.jpg",
                     date: "March 2024"
                 },
                 {
                     id: 2,
                     title: "Showcasing TerraGuard at DataFest Tbilisi",
                     excerpt: "Great atmosphere at DataFest Tbilisi, where TerraGuard showcased its vineyard analytics technology and connected with startups, mentors, and innovators. The event helped us exchange ideas, explore collaborations, and gain insights for scaling. We're excited for what's next.",
-                    image: "datafest-tbilisi.jpg",
+                    image: "profilePics/datafest-tbilisi.jpg",
                     date: "February 2024"
                 },
                 // Add more blog posts here as needed
