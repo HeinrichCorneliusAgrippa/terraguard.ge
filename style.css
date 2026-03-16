@@ -19,13 +19,15 @@
   font-family: "KaLiteraturuli";
   src: url("ka_literaturuli-25052516694.ttf") format("truetype");
 }
-:lang(ka) body {
+html:lang(ka) body {
   font-family: "KaLiteraturuli", sans-serif;
 }
 
-:lang(ka) h1,
-:lang(ka) h2,
-:lang(ka) h3 {
+html:lang(ka) h1,
+html:lang(ka) h2,
+html:lang(ka) h3,
+html:lang(ka) .pilot-form-title,
+html:lang(ka) .stat-num {
   font-family: "DachiLynx", serif;
 }
 
@@ -71,7 +73,7 @@ nav {
   align-items: center;
   gap: 10px;
 
-  font-family: "DachiLynx", "DM Serif Display", serif;
+  font-family: "DM Serif Display", serif;
   font-size: 1.3rem;
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -308,7 +310,7 @@ nav {
 }
 
 .pilot-form-title{
-  font-family: "DachiLynx", "DM Serif Display", serif;
+  font-family: "DM Serif Display", serif;
   font-size:clamp(2rem, 3vw, 2.6rem);
   margin-top:2rem;
   margin-bottom:1.2rem;
@@ -318,7 +320,7 @@ nav {
 
 .pilot-stat-row { display: flex; gap: 2.5rem; flex-wrap: wrap; }
 .stat { display: flex; flex-direction: column; gap: 2px; }
-.stat-num { font-family: "DachiLynx", "DM Serif Display", serif; font-size: 2rem; color: var(--accent); line-height: 1; }
+.stat-num { font-family: "DM Serif Display", serif; font-size: 2rem; color: var(--accent); line-height: 1; }
 .stat-label { font-size: 0.82rem; color: var(--muted); }
 #pilot .btn-primary { background: var(--text); color: #fff; }
 #pilot .btn-primary:hover { background: var(--accent); color: #fff; }
@@ -438,7 +440,7 @@ nav {
   padding:13px 14px;
   border-radius:10px;
   border:1px solid var(--border);
-  font-family: "KaLiteraturuli", "DM Sans", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size:0.95rem;
   background:#fff;
   transition:border-color .2s, box-shadow .2s;
@@ -447,7 +449,7 @@ nav {
 .contact-form textarea{
   min-height:130px;
   resize:vertical;
-font-family: "KaLiteraturuli", "DM Sans", sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 .contact-form input:focus,
