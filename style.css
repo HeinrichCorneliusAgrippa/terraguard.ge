@@ -280,17 +280,40 @@ nav {
   @keyframes nudge { 0%,100% { transform: translateX(0); } 50% { transform: translateX(5px); } }
 
   /* ─── PILOT ─────────────────────────────────────────────── */
-  #pilot { background: var(--bg3); }
-  .pilot-inner {
-    max-width: 640px; margin: 0 auto;
-    display: flex; flex-direction: column; align-items: flex-start; gap: 1.5rem;
-  }
-  .pilot-stat-row { display: flex; gap: 2.5rem; flex-wrap: wrap; }
-  .stat { display: flex; flex-direction: column; gap: 2px; }
-  .stat-num { font-family: 'DM Serif Display', serif; font-size: 2rem; color: var(--accent); line-height: 1; }
-  .stat-label { font-size: 0.82rem; color: var(--muted); }
-  #pilot .btn-primary { background: var(--text); color: #fff; }
-  #pilot .btn-primary:hover { background: var(--accent); color: #fff; }
+  /* ─── PILOT ─────────────────────────────────────────────── */
+#pilot { background: var(--bg3); }
+.pilot-inner {
+  max-width: 900px; margin: 0 auto;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 1.5rem;
+}
+
+.pilot-form-title{
+  font-family:'DM Serif Display', serif;
+  font-size:clamp(2rem, 3vw, 2.6rem);
+  margin-top:2rem;
+  margin-bottom:1.2rem;
+  text-align:center;
+  width:100%;
+}
+
+.pilot-stat-row { display: flex; gap: 2.5rem; flex-wrap: wrap; }
+.stat { display: flex; flex-direction: column; gap: 2px; }
+.stat-num { font-family: 'DM Serif Display', serif; font-size: 2rem; color: var(--accent); line-height: 1; }
+.stat-label { font-size: 0.82rem; color: var(--muted); }
+#pilot .btn-primary { background: var(--text); color: #fff; }
+#pilot .btn-primary:hover { background: var(--accent); color: #fff; }
+
+/* Contact Form Card */
+.contact-form-card{
+  width:100%;
+  max-width:760px;
+  margin:3rem auto 0;
+  padding:2.4rem;
+  background:#fff;
+  border-radius:16px;
+  border:1px solid var(--border);
+  box-shadow:0 12px 32px rgba(0,0,0,0.06);
+}
 
   /* ─── CONTACT ───────────────────────────────────────────── */
 
