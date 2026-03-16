@@ -6,18 +6,24 @@
   }, { threshold: 0.1 });
   reveals.forEach(el => observer.observe(el));
 
-const toggle = document.getElementById("langToggle");
+let lang = "en";
 
-let currentLang = "en";
+document.getElementById("langToggle").addEventListener("click", function(e) {
+  e.preventDefault();
 
-toggle.addEventListener("click", () => {
+  lang = lang === "en" ? "ka" : "en";
 
-  currentLang = currentLang === "en" ? "ka" : "en";
+  document.documentElement.lang = lang;
 
   document.querySelectorAll("[data-en]").forEach(el => {
-    el.innerHTML = el.dataset[currentLang];
+    const value = el.dataset[lang];
+
+    if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+      el.placeholder = value;
+    } else {
+      el.innerHTML = value;
+    }
   });
 
-  toggle.textContent = currentLang === "en" ? "ქართული" : "EN";
-
+  this.textContent = lang === "en" ? "ქართული" : "EN";
 });
