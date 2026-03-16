@@ -29,7 +29,7 @@
     <img src="profilePics/logo.png" alt="" onerror="this.style.display='none'">
     <strong>TerraGuard</strong>
   </a>
-  <a class="nav-cta" href="#pilot">Translate</a>
+  <a class="nav-cta" href="#pilot">ქართული</a>
 </nav>
 
 <!-- HERO -->
@@ -132,6 +132,7 @@
 </section>
 
 <!-- PILOT -->
+<!-- PILOT -->
 <section id="pilot">
   <div class="pilot-inner reveal">
     <h2>Pilot Program</h2>
@@ -146,10 +147,46 @@
         <span class="stat-label">During pilot phase</span>
       </div>
     </div>
-    <a class="btn-primary" href="mailto:info@terraguard.ge?subject=Pilot Application">
-      Apply for Pilot
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
+
+    <h3 class="pilot-form-title">Apply for Pilot</h3>
+
+    <div class="contact-form-card">
+      <form
+        action="https://formspree.io/f/mzdjjvdy"
+        method="POST"
+        class="contact-form"
+      >
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required
+        >
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          required
+        >
+
+        <textarea
+          name="message"
+          placeholder="Tell us about your vineyard"
+          required
+        ></textarea>
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="Pilot Program Application"
+        >
+
+        <button type="submit" class="contact-submit">
+          Apply for Pilot
+        </button>
+      </form>
+    </div>
   </div>
 </section>
 
@@ -227,49 +264,7 @@
 
     <!-- CONTACT FORM -->
 
-    <div class="contact-form-card reveal">
-
-      <form
-        action="https://formspree.io/f/mzdjjvdy"
-        method="POST"
-        class="contact-form"
-      >
-
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          required
-        >
-
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          required
-        >
-
-        <textarea
-          name="message"
-          placeholder="Your Message"
-          required
-        ></textarea>
-
-        <input
-          type="hidden"
-          name="_subject"
-          value="New TerraGuard Contact"
-        >
-
-        <button type="submit" class="contact-submit">
-          Send Message
-        </button>
-
-      </form>
-
-    </div>
-
-  </div>
+   </div>
 </section>
 
 <!-- FOOTER -->
