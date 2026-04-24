@@ -4,7 +4,10 @@
   "@type": "Organization",
   "name": "TerraGuard",
   "url": "https://terraguard.ge",
-  "description": "AI-powered drone startup for vineyard health monitoring",
-  "email": "info@terraguard.ge"
+  "description": "AI-powered early disease detection for vineyards using drone multispectral imaging. Detects powdery mildew, downy mildew, and crop stress before visible symptoms appear.",
+  "email": "info@terraguard.ge",
+  "foundingLocation": "Tbilisi, Georgia",
+  "foundingDate": "2024",
+  "areaServed": "Georgia, South Caucasus"
 }
 </script>
