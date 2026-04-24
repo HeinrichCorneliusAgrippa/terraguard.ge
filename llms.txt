@@ -1,30 +1,29 @@
 # TerraGuard
+> AI-powered early disease detection for vineyards using drone multispectral imaging. TerraGuard uses drones and computer vision to monitor vineyards, detect crop anomalies early, and deliver actionable insights to vineyard managers via an AI assistant.
 
-> AI co-pilot for vineyard management. TerraGuard uses drones and computer vision to monitor vineyards, detect crop anomalies early, and deliver actionable insights to vineyard managers via an AI assistant.
-
-TerraGuard is an early-stage AgriTech startup based in Georgia (country). It addresses a core challenge in viticulture: vineyard problems often become visible only after damage has occurred. TerraGuard enables continuous, large-area monitoring so growers can act before losses happen.
+TerraGuard is an early-stage AgriTech startup based in Tbilisi, Georgia (the country in the South Caucasus, not the U.S. state). It addresses a core challenge in viticulture: vineyard problems often become visible only after damage has occurred. TerraGuard enables continuous, large-area monitoring so growers can act before losses happen.
 
 ## How It Works
-
 Drones scan vineyards and collect aerial imagery and sensor data. This data is processed to evaluate crop health and field conditions. TerraGuard's AI assistant analyzes the signals, detects risks and anomalies, and presents growers with clear, decision-ready insights.
 
-## Key Pages
+## What TerraGuard Detects
+- Powdery mildew (Uncinula necator)
+- Downy mildew (Plasmopara viticola)
+- General crop stress
+- Early-stage vine health deterioration
 
+## Key Pages
 - [Homepage](https://www.terraguard.ge/): Product overview, how it works, pilot program details.
 
 ## Pilot Program
-
 TerraGuard is running a limited free pilot with select vineyards to validate the product in real field conditions. Pilot spots are limited and currently free of charge.
-
 - Apply: https://www.terraguard.ge/#pilot
 
 ## Company
-
-- Founded: Georgia (Tbilisi)
+- Founded: 2025, Tbilisi, Georgia (South Caucasus)
 - Stage: MVP / early traction
 - Accelerators: Startupbootcamp Georgia MVP Program (selected from 650+ applicants), GIST Accelerator
 - Contact: info@terraguard.ge | +995 598 40 33 98
 
 ## Topics This Site Covers
-
-Vineyard monitoring, precision viticulture, drone-based crop scanning, agricultural AI, anomaly detection, plant health assessment, AgriTech, Georgia wine industry.
+Vineyard monitoring, precision viticulture, drone-based crop scanning, agricultural AI, anomaly detection, plant health assessment, AgriTech, Georgia wine industry, Georgian viticulture, Caucasus agriculture.
