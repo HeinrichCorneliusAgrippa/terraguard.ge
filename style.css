@@ -141,6 +141,19 @@ nav {
   }
 }
 
+.btn-login {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 17px 32px; border-radius: 100px;
+  min-width: 220px;
+  background: #fff; color: var(--text);
+  font-size: 1.05rem; font-weight: 600; text-decoration: none;
+  transition: transform 0.22s, box-shadow 0.22s, background 0.22s, color 0.22s;
+}
+.btn-login:hover {
+  background: var(--accent); color: #fff;
+  transform: translateY(-2px); box-shadow: 0 8px 28px rgba(45,106,79,0.35);
+}
+
   /* ─── HERO ─────────────────────────────────────────────── */
   #hero {
     position: relative;
@@ -200,18 +213,19 @@ nav {
   .backed-by-logos a:hover { background: rgba(255,255,255,0.18); border-color: rgba(255,255,255,0.3); }
   .backed-by-logos img { height: 30px; width: auto; object-fit: contain; filter: brightness(1.1) saturate(0.55); }
 
-  .hero-cta-wrap {
-    margin-top: 2.4rem;
-    display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap;
-    animation: fadeUp 0.8s 0.32s ease both;
-  }
-  .btn-primary {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 14px 32px; border-radius: 100px;
-    background: #fff; color: var(--text);
-    font-size: 0.95rem; font-weight: 600; text-decoration: none;
-    transition: transform 0.22s, box-shadow 0.22s, background 0.22s, color 0.22s;
-  }
+.hero-cta-wrap {
+  margin-top: 2.4rem;
+  display: flex; flex-direction: column; align-items: center; gap: 0.75rem;
+  animation: fadeUp 0.8s 0.32s ease both;
+}
+.btn-primary {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 14px 32px; border-radius: 100px;
+  min-width: 220px;
+  background: #fff; color: var(--text);
+  font-size: 0.95rem; font-weight: 600; text-decoration: none;
+  transition: transform 0.22s, box-shadow 0.22s, background 0.22s, color 0.22s;
+}
   .btn-primary:hover {
     background: var(--accent); color: #fff;
     transform: translateY(-2px); box-shadow: 0 8px 28px rgba(45,106,79,0.35);
