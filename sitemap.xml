@@ -1,13 +1,18 @@
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "TerraGuard",
-  "url": "https://terraguard.ge",
-  "description": "AI-powered early disease detection for vineyards using drone multispectral imaging. Detects powdery mildew, downy mildew, and crop stress before visible symptoms appear.",
-  "email": "info@terraguard.ge",
-  "foundingLocation": "Tbilisi, Georgia",
-  "foundingDate": "2024",
-  "areaServed": "Georgia, South Caucasus"
-}
-</script>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://terraguard.ge/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://terraguard.ge/"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://terraguard.ge/ka/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://terraguard.ge/"/>
+    <lastmod>2026-07-30</lastmod>
+  </url>
+  <url>
+    <loc>https://terraguard.ge/ka/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://terraguard.ge/"/>
+    <xhtml:link rel="alternate" hreflang="ka" href="https://terraguard.ge/ka/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://terraguard.ge/"/>
+    <lastmod>2026-07-30</lastmod>
+  </url>
+</urlset>

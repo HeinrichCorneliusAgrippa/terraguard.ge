@@ -9,10 +9,13 @@
 <meta property="og:image:height" content="630">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://terraguard.ge/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ka_GE">
 
 <link rel="canonical" href="https://terraguard.ge/" />
 <link rel="alternate" hreflang="en" href="https://terraguard.ge/" />
 <link rel="alternate" hreflang="ka" href="https://terraguard.ge/ka/" />
+<link rel="alternate" hreflang="x-default" href="https://terraguard.ge/" />
 <meta name="robots" content="index, follow">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="TerraGuard — AI-Powered Early Disease Detection for Vineyards">
@@ -32,6 +35,7 @@
   "description": "AI-powered early disease detection for vineyards using drone multispectral imaging. Detects powdery mildew, downy mildew, and crop stress before visible symptoms appear.",
   "foundingDate": "2024",
   "foundingLocation": "Tbilisi, Georgia",
+  "areaServed": "Georgia",
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+995598403398",
@@ -52,7 +56,74 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "TerraGuard",
-  "url": "https://terraguard.ge"
+  "url": "https://terraguard.ge",
+  "inLanguage": "en"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "en",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Who is TerraGuard designed for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TerraGuard is built for commercial vineyards, wineries, vineyard managers, viticulturists, and agricultural consultants who want to improve grape quality, reduce unnecessary field inspections, and make better management decisions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does TerraGuard work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TerraGuard combines high-resolution drone imagery with weather and environmental data. Our AI analyzes your vineyard and provides clear, actionable insights through an easy-to-use AI co-pilot."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which problems can TerraGuard detect?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TerraGuard currently helps identify early signs of fungal diseases, including powdery mildew and downy mildew (with additional diseases in development), irrigation issues and water stress, nutrient deficiencies, vine health variability, and areas that require closer field inspection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to own or operate a drone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. In Georgia, our team schedules and performs the drone flights for you. You simply receive the analysis and access to the TerraGuard AI co-pilot. In other countries, you can work with one of our drone mapping partners or use your own compatible drone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should my vineyard be scanned?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most vineyards benefit from a drone scan every one to two weeks during the growing season. Additional scans are recommended after significant weather events or when disease risk is high."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get started?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Request a demo or apply for our pilot program. We'll learn about your vineyard, explain how TerraGuard fits into your workflow, and help you get started with your first scan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does TerraGuard cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pricing depends on your vineyard size, deployment needs, and service model. Contact us for a customized quote or to discuss a pilot program."
+      }
+    }
+  ]
 }
 </script>
 
@@ -65,6 +136,8 @@
 
   
 <link rel="icon" type="image/png" href="profilePics/web_logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#2d6a4f">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
@@ -74,62 +147,190 @@
 <body>
 
 <!-- NAV -->
-<nav>
-<a class="nav-logo" href="#">
-  <img src="profilePics/logo.png" alt="TerraGuard logo">
-  <strong>TerraGuard</strong>
-</a>
-<a class="nav-cta" href="/ka/">ქართული</a>
+<nav class="site-nav" aria-label="Main navigation">
+  <a class="nav-logo" href="#hero">
+    <img src="profilePics/logo.png" alt="TerraGuard logo">
+    <strong>TerraGuard</strong>
+  </a>
+
+  <button type="button" class="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-menu" aria-label="Open menu">
+    <span class="site-nav-burger" aria-hidden="true"></span>
+  </button>
+
+  <div class="site-nav-menu" id="site-nav-menu">
+    <ul class="site-nav-links">
+      <li><a class="site-nav-link" href="#how">How It Works</a></li>
+      <li><a class="site-nav-link" href="#why">Why It Matters</a></li>
+      <li><a class="site-nav-link" href="#news">News</a></li>
+      <li><a class="site-nav-link" href="#faq">FAQ</a></li>
+      <li><a class="site-nav-link" href="#contact">Contact</a></li>
+    </ul>
+    <div class="site-nav-actions">
+      <a class="nav-cta" href="/ka/">ქართული</a>
+      <a class="nav-login" href="https://app.terraguard.ge/" target="_blank" rel="noopener noreferrer">Log In</a>
+      <a class="site-nav-cta" href="#pilot">Book a first flight</a>
+    </div>
+  </div>
 </nav>
 
 <!-- HERO -->
 <section id="hero">
 <div class="hero-bg"></div>
 <div class="hero-content">
-  <h1>AI Co-Pilot for Vineyard Management</h1>
-  <div class="backed-by">
-    <span class="backed-by-label">Backed by</span>
-    <div class="backed-by-logos">
-      <a href="#"><img src="profilePics/sbc.png" alt="Startupbootcamp Georgia partner"></a>
-      <a href="#"><img src="profilePics/gita.png" alt="GITA partner logo"></a>
+  <div class="hero-left">
+    <h1>One missed infection can cost you the vintage</h1>
+    <p class="hero-subtext">Drone imaging and AI that flag vineyard risk days before you can see it. Talk it through with your AI co-pilot, weigh the tradeoffs, and decide on the right action together.</p>
+    <div class="hero-cta-wrap">
+      <a class="btn-primary" href="https://app.terraguard.ge/" target="_blank" rel="noopener noreferrer">Log in</a>
+      <p class="hero-secondary-cta">New to TerraGuard? <a class="hero-inline-link" href="#pilot">Book a first flight <span class="hero-inline-arrow" aria-hidden="true">&rarr;</span></a></p>
     </div>
   </div>
-<div class="hero-cta-wrap">
-  <a class="btn-login" href="https://app.terraguard.ge/" target="_blank" rel="noopener noreferrer">Log In</a>
-  <a class="btn-primary" href="#pilot">Apply for Pilot</a>
-</div>
+  <div class="hero-right">
+    <div class="chat-bubble chat-bubble-user">How's my vineyard doing?</div>
+    <div class="chat-bubble chat-bubble-ai">Critical risk of powdery and downy mildew detected. The best spraying window is tomorrow at 09:00. If you can't spray tomorrow, the day after also works. Go in the evening, as light rain is expected in the morning.</div>
+  </div>
 </div>
 </section>
 
 <!-- WHY -->
 <section id="why">
-<div class="section-inner">
-  <h2>Why It Matters</h2>
-  <p class="body-text">Vineyard conditions change constantly and problems often become visible only after damage has already occurred. TerraGuard helps vineyard managers monitor large areas efficiently and gain early insights that support faster and better management decisions.</p>
+<div class="why-inner">
+  <div class="why-main">
+    <h2>By the time you see it, it's already spreading</h2>
+    <p class="body-text">Powdery and downy mildew often begin developing before visible symptoms appear. By the time the first signs are noticeable, infections may already be spreading across your vineyard, making timely intervention more difficult.</p>
+  </div>
+  <div class="why-sidebar">
+    <p class="body-text">Even low levels of powdery mildew can negatively affect grape yield and fruit quality, especially when early infections are not controlled promptly. Under favourable disease conditions, susceptible cultivars can experience substantial losses, with severity depending on cultivar susceptibility, infection timing, and overall disease pressure.</p>
+  </div>
 </div>
 </section>
 
 <!-- HOW -->
 <section id="how">
-<div class="section-inner">
-  <h2>How It Works</h2>
-  <p class="body-text">TerraGuard uses drones to scan vineyards and collect aerial data about the crop. This data is processed to evaluate vineyard conditions. TerraGuard's AI assistant analyzes signals, detects potential risks or anomalies, and provides growers with clear insights for vineyard management.</p>
+<div class="how-scroll">
+  <div class="how-sticky">
+    <div class="how-inner">
+      <div class="how-head">
+        <h2>From flight to spray decision</h2>
+        <div class="how-nav">
+          <div class="how-rail" aria-hidden="true"><span class="how-rail-fill"></span></div>
+          <ul class="how-nav-list">
+            <li>
+              <button type="button" class="how-nav-item" data-step-index="0">
+                <span class="how-nav-num">01</span>
+                <span class="how-nav-label">We fly</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="how-nav-item" data-step-index="1">
+                <span class="how-nav-num">02</span>
+                <span class="how-nav-label">AI reads the canopy</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="how-nav-item" data-step-index="2">
+                <span class="how-nav-num">03</span>
+                <span class="how-nav-label">You ask</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="how-nav-item" data-step-index="3">
+                <span class="how-nav-num">04</span>
+                <span class="how-nav-label">You act</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="how-steps">
+        <article class="how-step">
+          <div class="how-visual">
+            <img src="/assets/how-it-works/01-flight.webp" alt="A DJI Mavic 3 Multispectral drone flying a scheduled survey line above vineyard rows" loading="lazy" width="1586" height="992">
+          </div>
+          <div class="how-copy">
+            <span class="how-step-num">01</span>
+            <h3>We fly</h3>
+            <p class="body-text">Scheduled multispectral flights over your vineyard on a DJI Mavic 3 Multispectral.</p>
+          </div>
+        </article>
+        <article class="how-step">
+          <div class="how-visual">
+            <img src="/assets/how-it-works/02-canopy-map.webp" alt="Multispectral canopy stress map of a vineyard block, with higher-risk zones highlighted" loading="lazy" width="1586" height="992">
+          </div>
+          <div class="how-copy">
+            <span class="how-step-num">02</span>
+            <h3>AI reads the canopy</h3>
+            <p class="body-text">Computer vision maps canopy stress and flags patterns linked to disease risk before symptoms are visible.</p>
+          </div>
+        </article>
+        <article class="how-step">
+          <div class="how-visual">
+            <div class="how-chat">
+              <div class="chat-bubble how-chat-user">How's my vineyard doing?</div>
+              <div class="chat-bubble how-chat-ai">Critical risk of powdery and downy mildew detected. The best spraying window is tomorrow at 09:00. If you can't spray tomorrow, the day after also works. Go in the evening, as light rain is expected in the morning.</div>
+            </div>
+          </div>
+          <div class="how-copy">
+            <span class="how-step-num">03</span>
+            <h3>You ask</h3>
+            <p class="body-text">Ask about your vineyard in plain language and get a direct answer.</p>
+          </div>
+        </article>
+        <article class="how-step">
+          <div class="how-visual">
+            <img src="/assets/how-it-works/04-spray-window.webp" alt="Recommended spraying window with supporting reasoning and a weather-dependent fallback option" loading="lazy" width="1586" height="992">
+          </div>
+          <div class="how-copy">
+            <span class="how-step-num">04</span>
+            <h3>You act</h3>
+            <p class="body-text">Treat with a recommended window, the reasoning behind it, and a fallback if the weather shifts.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
 </div>
+</section>
+
+<!-- QUOTE -->
+<section id="quote">
+<figure class="quote-inner">
+  <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+  <blockquote class="quote-text">Early warning enabled us to take <span class="quote-accent">proactive measures</span> and plan ahead.</blockquote>
+  <hr class="quote-rule">
+  <figcaption class="quote-attr">Baia's Wine</figcaption>
+</figure>
 </section>
 
 <!-- NEWS -->
 <section id="news">
-<div class="section-inner reveal">
+<div class="section-inner news-inner-wide reveal">
   <h2>Latest News &amp; Updates</h2>
 </div>
-<div class="section-inner">
+<div class="section-inner news-inner-wide">
   <div class="news-scroll-wrap">
-    <div class="news-scroll">
+    <div class="news-scroll news-scroll-3up">
 
       <div class="news-card">
         <div class="news-card-img">
-          <img src="profilePics/me da dachi.png" alt="Startupbootcamp Georgia MVP Program"
-            onerror="this.style.display='none';this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg width=\'40\' height=\'40\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'#b8c9b0\' stroke-width=\'1.2\'><path d=\'M12 2L2 7l10 5 10-5-10-5z\'/><path d=\'M2 17l10 5 10-5\'/><path d=\'M2 12l10 5 10-5\'/></svg></div>'">
+          <picture>
+            <source srcset="/assets/news/me-grant.webp" type="image/webp">
+            <img src="/assets/news/me-grant.jpg" alt="TerraGuard team at the Startupbootcamp Georgia Market Entry Program grant announcement" loading="lazy" width="1536" height="1536">
+          </picture>
+        </div>
+        <div class="news-card-body">
+          <span class="news-tag">Accelerator & Funding</span>
+          <h3>TerraGuard Awarded 150,000 GEL Grant in Startupbootcamp Georgia Market Entry Program</h3>
+          <p>TerraGuard has officially been selected for the Startupbootcamp Georgia Market Entry Program and awarded a 150,000 GEL grant, after being chosen from a pool of more than 1,000 startups.</p>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <div class="news-card-img">
+          <picture>
+            <source srcset="/assets/news/me-da-dachi.webp" type="image/webp">
+            <img src="/assets/news/me-da-dachi.jpg" alt="TerraGuard co-founders at the Startupbootcamp Georgia MVP Program launch event" loading="lazy" width="1080" height="1080">
+          </picture>
         </div>
         <div class="news-card-body">
           <span class="news-tag">Accelerator & Funding</span>
@@ -140,25 +341,29 @@
 
       <div class="news-card">
         <div class="news-card-img">
-          <img src="profilePics/12.jpg" alt="GIST Accelerator"
-            onerror="this.style.display='none';this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg width=\'40\' height=\'40\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'#b8c9b0\' stroke-width=\'1.2\'><path d=\'M12 2L2 7l10 5 10-5-10-5z\'/><path d=\'M2 17l10 5 10-5\'/><path d=\'M2 12l10 5 10-5\'/></svg></div>'">
-        </div>
-        <div class="news-card-body">
-          <span class="news-tag">Accelerator</span>
-          <h3>GIST Accelerator Journey Successfully Completed</h3>
-          <p>TerraGuard successfully completed the GIST acceleration program, working with mentors and refining the product vision for AI-powered vineyard monitoring.</p>
-        </div>
-      </div>
-
-      <div class="news-card">
-        <div class="news-card-img">
-          <img src="profilePics/datafest-tbilisi.jpg" alt="DataFest Tbilisi"
-            onerror="this.style.display='none';this.parentNode.innerHTML='<div class=\'img-placeholder\'><svg width=\'40\' height=\'40\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'#b8c9b0\' stroke-width=\'1.2\'><rect x=\'3\' y=\'3\' width=\'18\' height=\'18\' rx=\'2\'/><polyline points=\'3 9 21 9\'/><polyline points=\'9 21 9 9\'/></svg></div>'">
+          <picture>
+            <source srcset="/assets/news/datafest-tbilisi.webp" type="image/webp">
+            <img src="/assets/news/datafest-tbilisi.jpg" alt="TerraGuard presenting at DataFest Tbilisi" loading="lazy" width="1200" height="1200">
+          </picture>
         </div>
         <div class="news-card-body">
           <span class="news-tag">Event</span>
           <h3>Showcasing TerraGuard at DataFest Tbilisi</h3>
           <p>TerraGuard was presented at DataFest Tbilisi, where the team connected with researchers, startups, and innovators in the AI and data community.</p>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <div class="news-card-img">
+          <picture>
+            <source srcset="/assets/news/gist-accelerator.webp" type="image/webp">
+            <img src="/assets/news/gist-accelerator.jpg" alt="TerraGuard team receiving GIST Accelerator completion certificates" loading="lazy" width="1200" height="1200">
+          </picture>
+        </div>
+        <div class="news-card-body">
+          <span class="news-tag">Accelerator</span>
+          <h3>GIST Accelerator Journey Successfully Completed</h3>
+          <p>TerraGuard successfully completed the GIST acceleration program, working with mentors and refining the product vision for AI-powered vineyard monitoring.</p>
         </div>
       </div>
 
@@ -173,27 +378,168 @@
 
 <!-- PILOT -->
 <section id="pilot">
-<div class="pilot-inner">
-  <h2>Pilot Program</h2>
-  <p class="body-text">We are working with a limited number of vineyards to test TerraGuard in real vineyard conditions.</p>
-  <div class="pilot-stat-row">
-    <div class="stat">
-      <span class="stat-num">Limited</span>
-      <span class="stat-label">Pilot spots available</span>
-    </div>
-    <div class="stat">
-      <span class="stat-num">Free</span>
-      <span class="stat-label">During pilot phase</span>
+<div class="pilot-shell">
+  <div class="pilot-intro">
+    <h2>Book a first flight</h2>
+    <p class="body-text">We work with a limited number of commercial vineyards each season to run TerraGuard in real vineyard conditions. Applications are reviewed individually.</p>
+    <div class="pilot-next">
+      <h3 class="pilot-next-title">What happens next</h3>
+      <ol class="pilot-next-list">
+        <li>We review your vineyard details</li>
+        <li>We contact you to discuss scope and timing</li>
+        <li>We schedule your first flight</li>
+      </ol>
     </div>
   </div>
-  <h3 class="pilot-form-title">Apply for Pilot</h3>
-  <div class="contact-form-card">
-    <form action="https://formspree.io/f/mzdjjvdy" method="POST" class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Tell us about your vineyard" required></textarea>
-      <button type="submit" class="contact-submit">Apply for Pilot</button>
+
+  <div class="pilot-form-col">
+    <form action="https://formspree.io/f/mzdjjvdy" method="POST" class="pilot-form">
+      <div class="pilot-field">
+        <label class="pilot-label" for="pilot-name">Your Name <span class="pilot-req" aria-hidden="true">*</span></label>
+        <input class="pilot-input" type="text" id="pilot-name" name="name" autocomplete="name" required aria-required="true" aria-describedby="pilot-name-error">
+        <p class="pilot-error" id="pilot-name-error"></p>
+      </div>
+
+      <div class="pilot-field">
+        <label class="pilot-label" for="pilot-email">Your Email <span class="pilot-req" aria-hidden="true">*</span></label>
+        <input class="pilot-input" type="email" id="pilot-email" name="email" autocomplete="email" required aria-required="true" aria-describedby="pilot-email-error">
+        <p class="pilot-error" id="pilot-email-error"></p>
+      </div>
+
+      <div class="pilot-field">
+        <label class="pilot-label" for="pilot-size">Vineyard size (hectares) <span class="pilot-req" aria-hidden="true">*</span></label>
+        <select class="pilot-input pilot-select" id="pilot-size" name="vineyard-size" required aria-required="true" aria-describedby="pilot-size-error">
+          <option value="" disabled selected>Select a range</option>
+          <option value="Under 10 hectares">Under 10 hectares</option>
+          <option value="10 to 20 hectares">10 to 20 hectares</option>
+          <option value="20 to 50 hectares">20 to 50 hectares</option>
+          <option value="Over 50 hectares">Over 50 hectares</option>
+        </select>
+        <p class="pilot-error" id="pilot-size-error"></p>
+      </div>
+
+      <div class="pilot-field">
+        <label class="pilot-label" for="pilot-message">Tell us about your vineyard</label>
+        <textarea class="pilot-input" id="pilot-message" name="message" rows="4" aria-describedby="pilot-message-error"></textarea>
+        <p class="pilot-error" id="pilot-message-error"></p>
+      </div>
+
+      <button type="submit" class="pilot-submit-btn">Book a first flight</button>
+      <p class="pilot-form-status" role="alert"></p>
     </form>
+
+    <div class="pilot-success" hidden tabindex="-1">
+      <h3>Application received</h3>
+      <p class="body-text">Thanks — we have your vineyard details. We review each application individually and will be in touch to discuss scope and timing.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+<div class="faq-inner">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <h3 class="faq-heading">
+        <button type="button" class="faq-trigger" id="faq-q1" aria-expanded="false" aria-controls="faq-a1">
+          <span class="faq-question">Who is TerraGuard designed for?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+      </h3>
+      <div class="faq-answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
+        <div class="faq-answer-inner">
+          <p class="faq-text">TerraGuard is built for commercial vineyards, wineries, vineyard managers, viticulturists, and agricultural consultants who want to improve grape quality, reduce unnecessary field inspections, and make better management decisions.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-heading">
+        <button type="button" class="faq-trigger" id="faq-q2" aria-expanded="false" aria-controls="faq-a2">
+          <span class="faq-question">How does TerraGuard work?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+      </h3>
+      <div class="faq-answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
+        <div class="faq-answer-inner">
+          <p class="faq-text">TerraGuard combines high-resolution drone imagery with weather and environmental data. Our AI analyzes your vineyard and provides clear, actionable insights through an easy-to-use AI co-pilot.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-heading">
+        <button type="button" class="faq-trigger" id="faq-q3" aria-expanded="false" aria-controls="faq-a3">
+          <span class="faq-question">Which problems can TerraGuard detect?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+      </h3>
+      <div class="faq-answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
+        <div class="faq-answer-inner">
+          <p class="faq-text">TerraGuard currently helps identify early signs of fungal diseases, including powdery mildew and downy mildew (with additional diseases in development), irrigation issues and water stress, nutrient deficiencies, vine health variability, and areas that require closer field inspection.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-heading">
+        <button type="button" class="faq-trigger" id="faq-q4" aria-expanded="false" aria-controls="faq-a4">
+          <span class="faq-question">Do I need to own or operate a drone?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+      </h3>
+      <div class="faq-answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
+        <div class="faq-answer-inner">
+          <p class="faq-text">No. In Georgia, our team schedules and performs the drone flights for you. You simply receive the analysis and access to the TerraGuard AI co-pilot. In other countries, you can work with one of our drone mapping partners or use your own compatible drone.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-heading">
+        <button type="button" class="faq-trigger" id="faq-q5" aria-expanded="false" aria-controls="faq-a5">
+          <span class="faq-question">How often should my vineyard be scanned?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+      </h3>
+      <div class="faq-answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
+        <div class="faq-answer-inner">
+          <p class="faq-text">Most vineyards benefit from a drone scan every one to two weeks during the growing season. Additional scans are recommended after significant weather events or when disease risk is high.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-heading">
+        <button type="button" class="faq-trigger" id="faq-q6" aria-expanded="false" aria-controls="faq-a6">
+          <span class="faq-question">How do I get started?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+      </h3>
+      <div class="faq-answer" id="faq-a6" role="region" aria-labelledby="faq-q6">
+        <div class="faq-answer-inner">
+          <p class="faq-text">Request a demo or apply for our pilot program. We'll learn about your vineyard, explain how TerraGuard fits into your workflow, and help you get started with your first scan.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3 class="faq-heading">
+        <button type="button" class="faq-trigger" id="faq-q7" aria-expanded="false" aria-controls="faq-a7">
+          <span class="faq-question">How much does TerraGuard cost?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+      </h3>
+      <div class="faq-answer" id="faq-a7" role="region" aria-labelledby="faq-q7">
+        <div class="faq-answer-inner">
+          <p class="faq-text">Pricing depends on your vineyard size, deployment needs, and service model. Contact us for a customized quote or to discuss a pilot program.</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 </section>

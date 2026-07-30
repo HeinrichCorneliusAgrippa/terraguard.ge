@@ -1,29 +1,35 @@
 # TerraGuard
-> AI-powered early disease detection for vineyards using drone multispectral imaging. TerraGuard uses drones and computer vision to monitor vineyards, detect crop anomalies early, and deliver actionable insights to vineyard managers via an AI assistant.
 
-TerraGuard is an early-stage AgriTech startup based in Tbilisi, Georgia (the country in the South Caucasus, not the U.S. state). It addresses a core challenge in viticulture: vineyard problems often become visible only after damage has occurred. TerraGuard enables continuous, large-area monitoring so growers can act before losses happen.
+> TerraGuard uses drone multispectral imaging and AI to detect powdery mildew, downy mildew, and crop stress in vineyards before visible symptoms appear.
 
-## How It Works
-Drones scan vineyards and collect aerial imagery and sensor data. This data is processed to evaluate crop health and field conditions. TerraGuard's AI assistant analyzes the signals, detects risks and anomalies, and presents growers with clear, decision-ready insights.
+## About
 
-## What TerraGuard Detects
-- Powdery mildew (Uncinula necator)
-- Downy mildew (Plasmopara viticola)
-- General crop stress
-- Early-stage vine health deterioration
+Powdery and downy mildew often begin developing before visible symptoms appear. By the time the first signs are noticeable, infections may already be spreading across a vineyard, making timely intervention more difficult.
 
-## Key Pages
-- [Homepage](https://www.terraguard.ge/): Product overview, how it works, pilot program details.
+TerraGuard combines high-resolution drone imagery with weather and environmental data. Its AI analyzes the vineyard and provides clear, actionable insights through an easy-to-use AI co-pilot. Scheduled multispectral flights are flown on a DJI Mavic 3 Multispectral; computer vision maps canopy stress and flags patterns linked to disease risk before symptoms are visible. Growers can ask about their vineyard in plain language and receive a recommended treatment window, the reasoning behind it, and a fallback if the weather shifts.
 
-## Pilot Program
-TerraGuard is running a limited free pilot with select vineyards to validate the product in real field conditions. Pilot spots are limited and currently free of charge.
-- Apply: https://www.terraguard.ge/#pilot
+TerraGuard is built for commercial vineyards, wineries, vineyard managers, viticulturists, and agricultural consultants who want to improve grape quality, reduce unnecessary field inspections, and make better management decisions.
 
-## Company
-- Founded: 2025, Tbilisi, Georgia (South Caucasus)
-- Stage: MVP / early traction
-- Accelerators: Startupbootcamp Georgia MVP Program (selected from 650+ applicants), GIST Accelerator
-- Contact: info@terraguard.ge | +995 598 40 33 98
+## What TerraGuard detects
 
-## Topics This Site Covers
-Vineyard monitoring, precision viticulture, drone-based crop scanning, agricultural AI, anomaly detection, plant health assessment, AgriTech, Georgia wine industry, Georgian viticulture, Caucasus agriculture.
+- Early signs of fungal diseases, including powdery mildew and downy mildew (with additional diseases in development)
+- Irrigation issues and water stress
+- Nutrient deficiencies
+- Vine health variability
+- Areas that require closer field inspection
+
+## Key pages
+
+- [English site](https://terraguard.ge/)
+- [Georgian site](https://terraguard.ge/ka/)
+
+## Pilot program
+
+TerraGuard works with a limited number of commercial vineyards each season to run the product in real vineyard conditions. Applications are reviewed individually.
+
+- Apply: https://terraguard.ge/#pilot
+
+## Contact
+
+- Email: info@terraguard.ge
+- Phone: +995 598 40 33 98

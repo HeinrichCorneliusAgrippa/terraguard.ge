@@ -1,0 +1,24 @@
+{
+  "name": "TerraGuard",
+  "short_name": "TerraGuard",
+  "description": "AI-powered early disease detection for vineyards using drone multispectral imaging.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#2d6a4f",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/profilePics/web_logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/profilePics/logo.png",
+      "sizes": "1000x1000",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
